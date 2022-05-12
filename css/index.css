@@ -1,0 +1,7 @@
+@import "hyperlink.css";
+@import "navigation.css";
+div {
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}

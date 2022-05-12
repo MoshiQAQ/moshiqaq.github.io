@@ -1,0 +1,12 @@
+ul.navigation{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li.navigation{
+    float: left;
+}
+a.navigation{
+    display: block;
+    padding: 8px;
+}
