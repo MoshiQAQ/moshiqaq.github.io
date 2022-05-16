@@ -2,11 +2,21 @@ ul.navigation{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    border-bottom: 3px dashed;
+    margin-bottom: 12px;
 }
 li.navigation{
+    display: inline;
     float: left;
 }
 a.navigation{
     display: block;
-    padding: 8px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+a.navigation:hover{
+    background-color:rgb(209, 209, 209);
 }
