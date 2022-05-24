@@ -1,0 +1,14 @@
+p.quotation{
+    background-color: rgba(201, 201, 201, 0.362);
+    z-index: 2;
+    border-radius: 6px;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: rgb(151, 151, 151);
+    text-align: left;
+    text-indent: 2em;
+    font-style: italic;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: small;
+}

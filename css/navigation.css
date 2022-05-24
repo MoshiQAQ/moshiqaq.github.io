@@ -4,7 +4,7 @@ ul.navigation{
     padding: 0;
     overflow: hidden;
     border-bottom: 3px dashed;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 }
 li.navigation{
     display: inline;
@@ -19,4 +19,13 @@ a.navigation{
 }
 a.navigation:hover{
     background-color:rgb(209, 209, 209);
+}
+div.navigation{
+    position: fixed;
+    top: 0;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    z-index: 5;
 }

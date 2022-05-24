@@ -1,15 +1,17 @@
 @import "hyperlink.css";
 @import "navigation.css";
+@import "quotation.css";
 div.main{
     width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 div.left{
+    position: fixed;
     width: 256px;
-    margin-top: 0;
+    margin-top: 32px;
     margin-left: 0;
-    text-align: center;
+    /* text-align: center; */
     float: left;
 }
 div.right{
@@ -20,15 +22,18 @@ div.right{
 }
 img.myphoto{
     height: 128px;
-    margin: 0 auto;
     margin-top: 32px;
     margin-bottom: 4px;
+
 }
 p.bio{
     text-align: left;
-    font-size: 2;
     text-indent: 2em;
-    word-wrap: break-word;
+    font-size: small;
+    /* word-wrap: break-word; */
+    /* hyphens: auto;
+    word-break: break-all; */
+    overflow-wrap: break-word;
 }
 a.icon:link{
     color: black;
