@@ -1,6 +1,7 @@
 @import "hyperlink.css";
 @import "navigation.css";
 @import "quotation.css";
+@import "separateline.css";
 div.main{
     width: 960px;
     margin-left: auto;
