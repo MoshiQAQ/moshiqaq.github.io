@@ -1,152 +1,187 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Zhaoyang Yu's Home Page</title>
-    <link href="css/index.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhaoyang Yu</title>
     <style>
-
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100vh; 
+            text-align: center; 
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        header { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            width: 60%; 
+            margin-bottom: 20px; 
+        }
+        header img {
+            margin-right: 20px; /* Adds space between the image and the text */
+        }
+        section { 
+            margin-bottom: 20px; 
+            width: 80%; 
+        }
+        h2 { 
+            text-align: left; 
+            width: 100%;
+        }
+        h2::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right, gray, transparent, transparent);
+            margin-top: 5px;
+        }
+        .publication, .experience { 
+            margin-left: 20px; 
+            text-align: left; 
+        }
+        .publication:before, .experience:before { 
+            content: "- "; 
+        }
+        .logo {
+            height: 50px; /* Adjust based on your preference */
+            margin-left: 10px; /* Adds space between the text and the logo */
+            vertical-align: middle; /* Aligns the logo with the middle of the text */
+        }
+        .list-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .text-content {
+            text-align: left;
+        }
+        .time {
+            font-style: italic;
+            font-size: 0.6em;
+            color: gray;
+        }
+        .big-name{
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .small-content{
+            font-size: 0.8em;
+        }
     </style>
 </head>
-
 <body>
-<div class="container">
-    <section>
-        <table>
-            <tr>
-                <td>
-                    <img class="avatar" src="assets/img/zhaoyang_512.png"/>
-                </td>
-                <td>
-                    <div>
-                        <span class="title">Zhaoyang Yu</span>
-                        <p class="info">
-                <span>
-                    Undergraduate Student
-                    <br/>
-                    Renmin University of China
-                    <br/>
-                    Gaoling School of Artificial Intelligence
-                    <br/>
-                    Ca' Foscari University of Venice (exchange)
-                  	<br/>
-                    TECNOLOGIE E SCIENZE DELL'INFORMAZIONE
-                </span>
-                        </p>
+    <header>
+        <img src="./assets/img/zhaoyang_512.png" alt="Zhaoyang Yu" style="height: 100px;"> <!-- Adjust the image path and style as needed -->
+        <div>
+            <h1>Zhaoyang Yu 于兆洋</h1>
+            <p>Email: yuzhaoyang [AT] ruc.edu.cn</p> <!-- Update the email address -->
+            <p><a href="https://github.com/MoshiQAQ">GitHub</a> · <a href="https://www.zhihu.com/people/arecritezhu">Zhihu</a></p>
+        </div>
+    </header>
 
-                        <p class="info">
-                <span>
-                    yuzhaoyang0713 AT ruc DOT edu DOT cn
-                    <br/>
-                    Phone.: +86-131-8196-5676
-                    <br/>
-                </span>
-                        </p>
-                    </div>
-                </td>
-            </tr>
-        </table>
+    <section id="bio">
+        <p class="text-content">I'm an undergraduate student at Renmin University of China, Gaoling School of AI. From 2021 to 2022, I had the privilege of studying computer vision, multimodal algorithms, and robotics under the mentorship of Prof.
+        <a href="https://dtaoo.github.io/">Hu Di</a>. In 2024, I engaged in research on the memory mechanisms of LLM Agents, guided by Prof. <a href="https://xu-chen.com/">Chen Xu</a>.</p>
     </section>
 
-    <hr class="hrLine"/>
-
-    <section>
-        <h1 class="title">Research Interest</h1>
-        <p>
-            Robotics, Neural Networks, Deep Learning, Affective Brain-Computer Interface.
-        </p>
-    </section>
-
-    <hr class="hrLine"/>
-
-    <section>
-        <h1 class="title">Education Background</h1>
-        <p>
-            I'm currently an undergraduate student at the Gaoling School of AI, Renmin University of China. I'm also an exchange student at Ca'Foscari University of Venice. During my bachelor's studies, I've had the privilege of being advised by <a href="https://dtaoo.github.io/">Di Hu</a> and have been a proud member of <a href="https://gewu-lab.github.io/">GeWu-Lab</a>.
-        </p>
-    </section>
-
-    <hr class="hrLine"/>
-
-    <section>
-        <h1 class="title">Work Experience</h1>
-        <p>
-            Microsoft Learn Student Ambassador since 2021.
-        </p>
-    </section>
-
-    <hr class="hrLine"/>
-
-    <section>
-        <h1 class="title">Projects</h1>
-        <div class="info">
-            <ol class="grantList">
-                <li>
-                        <span>
-                            <strong>
-                                Mask Detection Based on Huawei Atlas 200DK
-                            </strong>
-                            <br/>
-                            Huawei Atlas 200DK is a high-performance AI application developer board that integrates the Ascend 310 AI processor to facilitate quick development and verification.<br/>
-                            Deployed YOLOv3-ResNet18 to Huawei Atlas 200DK.<br/>
-                            Accelerated inference with the GPU of Huawei Atlas 200DK.<br/>
-                            Built dataset and finetuned the model.
-                        </span>
-                </li>
-                <li>
-                        <span>
-                            <strong>
-                                MI CyberDog Redevelopment
-                            </strong>
-                            <br/>CyberDog is a bionic quadruped robot developed by Xiaomi.<br/>
-                            Visual perception with Wudao Wenlan. Shown at 2022 BAAI Conference.<br/>
-                            Training multimodal navigation model on the SoundSpaces platform and deploying them in real environments with good results.<br/>
-                            More interesting work in progress...<br/>
-                        </span>
-                </li>
-            </ol>
+    <section id="open-source">
+        <h2>Open Source Projects</h2>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Fibonacci Heap</strong> (Contributer)<br>
+                <span class="small-content">Fibonacci Heap Implemented by C++</span><br>
+                <span class="time">2022</span>  
+            </div>
+            <div class="project-icons">
+                <img src="https://img.shields.io/github/forks/woodfrog/FibonacciHeap" alt="fork">
+                <img src="https://img.shields.io/github/stars/woodfrog/FibonacciHeap" alt="star">
+            </div>
         </div>
     </section>
 
-    <hr class="hrLine"/>
+    
+    <!-- <section id="publications">
+        <h2>Selected Publications</h2>
+        <div class="publication">Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation.</div>
+        <div class="publication">A Survey of Large Language Models.</div>
+    </section> -->
 
-    <section>
-        <h1 class="title">Awards</h1>
-        <p>
-        <ol>
-          	<li>2022 Tencent Youth Game Designer Challenge Merit Award</li>
-          	<li>2022 MCM/ICM Contest Meritorious Winner (top 7%)</li>
-          	<li>2020-2021 Learning Excellence Scholarship in Renmin University of China</li>
-        </ol>
-      	</p>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Renmin University of China</strong><br>
+                - <span class="small-content">B.E., Artificial Intelligence</span><br>
+                <span class="time">2020-2024</span>
+            </div>
+            <img src="./assets/img/ruc.png" alt="RUC Logo" class="logo">
+        </div>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Ca' Foscari University of Venice</strong><br>
+                - <span class="small-content">Exchange, Information Technology</span><br>
+                <span class="time">2022-2023</span>
+            </div>
+            <img src="./assets/img/ca-foscari.png" alt="Ca' Foscari Logo" class="logo">
+        </div>
     </section>
 
-    <hr class="hrLine"/>
-
-    <section>
-        <h1 class="title">Others</h1>
-        <p>
-        <ol>
-          	<li>Languages: Chinese(native), English(IELTS 7.0)</li>
-          	<li>Hobbies: Badminton, Piano, Guitar</li>
-        </ol>
-      	</p>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Xiaomi</strong><br>
+                <span class="small-content">Algorithm Engineer</span><br>
+                - <span class="small-content">Embodied AI Agent, Task Planing, Intent Understanding</span><br>
+                <span class="time">2024.01-2024.03</span>
+            </div>
+            <img src="./assets/img/xiaomi.png" alt="Xiaomi Logo" class="logo">
+        </div>
     </section>
 
-    <hr class="hrLine"/>
-
-    <section>
-        <h1 class="title">Links</h1>
-        <a href="https://gewu-lab.github.io/">GeWu-Lab</a>
-        &nbsp;
-        <a href="https://www.ruc.edu.cn/en">RUC</a>
+    <section id="service">
+        <h2>Service</h2>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Microsoft Student Learning Ambassador</strong><br>
+                - <span class="small-content">Promoting MS techniques and products, Organizing and participating in MS events</span><br>
+                <span class="time">2021-2023</span>
+            </div>
+            <img src="./assets/img/ms.png" alt="MS Logo" class="logo">
+        </div>
     </section>
-    <br/>
-    <br/>
-</div>
 
+    <section id="Award">
+        <h2>Award</h2>
+        <div class="list-item">
+            <div class="text-content">
+                - <span class="small-content">The 15th National College Student Mathematics Competition Second Prize</span>
+                <span class="time">2023</span><br>
+                - <span class="small-content">Tencent Youth Game Designer Challenge Merit Award</span>
+                <span class="time">2022</span><br>
+                - <span class="small-content">MCM/ICM Contest Meritorious Winner (top 7%)</span>
+                <span class="time">2022</span><br>
+                - <span class="small-content">2020-2021 Learning Excellence Scholarship in RUC</span>
+                <span class="time">2020-2021</span>
+            </div>
+        </div>
+    </section>
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MoshiQAQ/moshiqaq.github.io?label=Latest%20Update">
+    <script>
+        // Example JavaScript for potential interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any JS-based interactivity here
+        });
+    </script>
 </body>
-
 </html>
