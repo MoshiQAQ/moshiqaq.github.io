@@ -81,6 +81,15 @@
             color: blue; /* Keeps the link color consistent with the surrounding text or specified color */
             text-decoration: none; /* Removes underline from links */
         }
+        @media (max-width: 600px) {
+            body, header, section {
+                margin-left: 10px; /* 在手机屏幕上减少左边距 */
+                margin-right: 10px; /* 在手机屏幕上减少右边距 */
+            }
+            header, section {
+                width: auto; /* 让header和section的宽度自适应 */
+            }
+        }
     </style>
 </head>
 <body>
