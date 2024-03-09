@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif; 
             margin: 0; 
             padding: 0; 
+            padding-top: 50px;
             display: flex; 
             flex-direction: column; 
             align-items: center; 
@@ -21,12 +22,16 @@
         header { 
             display: flex; 
             align-items: center; 
-            justify-content: center; 
-            width: 60%; 
+            justify-content: flex-start; 
+            width: 80%; 
             margin-bottom: 20px; 
         }
         header img {
-            margin-right: 20px; /* Adds space between the image and the text */
+            margin-left: 8%;
+            margin-right: 16%; /* Adds space between the image and the text */
+        }
+        header > div {
+            text-align: left; /* Aligns the text to the left */
         }
         section { 
             margin-bottom: 20px; 
@@ -97,32 +102,76 @@
 </head>
 <body>
     <header>
-        <img src="./assets/img/zhaoyang_512.png" alt="Zhaoyang Yu" style="height: 100px;"> <!-- Adjust the image path and style as needed -->
+        <img src="./assets/img/zhaoyang_512.png" alt="Zhaoyang Yu" style="height: 150px;"> <!-- Adjust the image path and style as needed -->
         <div>
             <h1>Zhaoyang Yu 于兆洋</h1>
             <p>Email: yuzhaoyang [AT] ruc.edu.cn</p> <!-- Update the email address -->
-            <p><a href="https://github.com/MoshiQAQ">GitHub</a> · <a href="https://www.zhihu.com/people/arecritezhu">Zhihu</a></p>
+            <p><a href="https://github.com/MoshiQAQ">GitHub</a> • <a href="https://www.zhihu.com/people/arecritezhu">Zhihu</a> • <a href="https://twitter.com/ZhaoyangYu22356">Twitter</a></p>
         </div>
     </header>
 
     <section id="bio">
-        <p class="text-content">I'm an undergraduate student at Renmin University of China, Gaoling School of AI. From 2021 to 2022, I had the privilege of studying computer vision, multimodal machine learning, and robotics under the mentorship of Prof.
-        <a href="https://dtaoo.github.io/">Hu Di</a>. In 2024, I engaged in research on the memory mechanisms of LLM Agents, advised by Prof. <a href="https://xu-chen.com/">Chen Xu</a>.</p>
+        <p class="text-content">I'm an undergraduate student at Renmin University of China, Gaoling School of AI. I'm actively seeking a <strong>Research Intern</strong> for my gap year. My research interest include <strong>LLMs Agent, Embodied AI Agent</strong>.</p>
+        <p class="text-content">From 2021 to 2022, I had the privilege of studying computer vision, multimodal machine learning, and robotics under the mentorship of Prof.
+        <a href="https://dtaoo.github.io/">Hu Di</a>. In 2024, I engaged in research on the memory mechanisms of LLMs Agent, advised by Prof. <a href="https://xu-chen.com/">Chen Xu</a>.</p>
     </section>
 
-    <section id="open-source">
-        <h2>Open Source Projects</h2>
+    <section id="projects">
+        <h2>Projects</h2>
         <div class="list-item">
             <div class="text-content">
                 <strong class="big-name">Fibonacci Heap</strong> (Contributer)<br>
                 <span class="small-content">Fibonacci Heap Implemented by C++</span><br>
+                <span class="small-content"><a href="https://github.com/woodfrog/FibonacciHeap">Link</a></span><br>
                 <span class="time">2022</span>  
             </div>
-            <div class="project-icons">
-                <img src="https://img.shields.io/github/forks/woodfrog/FibonacciHeap" alt="fork">
-                <img src="https://img.shields.io/github/stars/woodfrog/FibonacciHeap" alt="star">
-            </div>
+            <table style="float: right; border: none;">
+                <tr>
+                    <td style="border: none;">
+                        <img src="https://img.shields.io/github/forks/woodfrog/FibonacciHeap" alt="fork">
+                    </td>
+                    <td style="border: none;">
+                        <img src="https://img.shields.io/github/stars/woodfrog/FibonacciHeap" alt="star">
+                    </td>
+                </tr>
+            </table>
         </div>
+
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Sensory Substitution for the Blind</strong> (Contributer)<br>
+                <span class="small-content">SSD Technology Research: make the visually disabled 'SEE' the world again</span><br>
+                <span class="small-content"><a href="https://zhuanlan.zhihu.com/p/303239531">Zhihu</a> • <a href="https://gewu-lab.github.io/project/5_sensory-substitution-for-the-blind/">GeWu-Lab</a></span><br>
+                <span class="time">2022-2023</span>  
+            </div>
+            <table style="float: right; border: none;">
+                <tr>
+                    <td style="border: none;">
+                    </td>
+                    <td style="border: none;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Audio-Visual Navigation of Quadruped Bionic Robot</strong><br>
+                <span class="small-content">Emotional Perception of Multimodal Scenarios & Audio-Visual Navigation of Quadruped Bionic Robot</span><br>
+                <span class="small-content"><a href="https://three-cyber-dogers.github.io/">GeWu-Lab</a> • <a href="https://www.bilibili.com/video/BV1FS4y1i7JR/">Bilibili[1]</a> • <a href="https://www.bilibili.com/video/BV1cT4y1W7mq/">Bilibili[2]</a></span><br>
+                <span class="time">2022-2023</span>  
+            </div>
+            <table style="float: right; border: none;">
+                <tr>
+                    <td style="border: none;">
+                    </td>
+                    <td style="border: none;">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        
     </section>
 
     
@@ -138,7 +187,7 @@
             <div class="text-content">
                 <strong class="big-name">Renmin University of China</strong><br>
                 - <span class="small-content">B.E., Artificial Intelligence</span><br>
-                <span class="time">2020-2024</span>
+                <span class="time">2020-2024(expected)</span>
             </div>
             <img src="./assets/img/ruc.png" alt="RUC Logo" class="logo">
         </div>
@@ -156,13 +205,31 @@
         <h2>Experience</h2>
         <div class="list-item">
             <div class="text-content">
+                <strong class="big-name">GeWu-Lab</strong><br>
+                <span class="small-content">Research Intern</span><br>
+                - <span class="small-content">Multimodal Navigation, Multimodal Machine Learning</span><br>
+                <span class="time">2021.07-2022.08</span>
+            </div>
+            <img src="./assets/img/gewu.png" alt="GeWu Logo" class="logo">
+        </div>
+        <div class="list-item">
+            <div class="text-content">
                 <strong class="big-name">Xiaomi</strong><br>
                 <span class="small-content">Algorithm Engineer</span><br>
                 - <span class="small-content">Embodied AI Agent, Task Planing, Intent Understanding</span><br>
-                <span class="time">2024.01-2024.03</span>
+                <span class="time">2024.01-present</span>
             </div>
             <img src="./assets/img/xiaomi.png" alt="Xiaomi Logo" class="logo">
-        </div>
+        </div>        
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">AI Engine Lab</strong><br>
+                <span class="small-content">Research Intern</span><br>
+                - <span class="small-content">LLMs Agent</span><br>
+                <span class="time">2024.02-present</span>
+            </div>
+            <img src="./assets/img/aiengine.jpeg" alt="AI Engine Logo" class="logo">
+        </div>        
     </section>
 
     <section id="service">
