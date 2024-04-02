@@ -16,8 +16,8 @@
             justify-content: center; 
             min-height: 100vh; 
             text-align: center; 
-            margin-left: 20%;
-            margin-right: 20%;
+            margin-left: 15%;
+            margin-right: 15%;
         }
         header { 
             display: flex; 
@@ -88,11 +88,17 @@
             text-decoration: none; /* Removes underline from links */
         }
         @media (max-width: 600px) {
+            /* 手机端不显示头像 */
+            header img {
+                display: none;
+            }
             body, header, section {
                 margin-left: 10px; /* 在手机屏幕上减少左边距 */
                 margin-right: 10px; /* 在手机屏幕上减少右边距 */
             }
             header{
+                /* 左对齐 */
+                text-align: left;
                 width: auto; /* 让header的宽度自适应 */
             }
             section {
