@@ -118,7 +118,7 @@
     </header>
 
     <section id="bio">
-        <p class="text-content">I received my undergraduate degree from Gaoling School of AI, Renmin University of China in June 2024. I'm actively seeking a PhD</strong> position at present. My research interest include <strong>efficiently building robust agent system</strong> and <strong>enhancing reasoning ability of agent</strong>.</p>
+        <p class="text-content">I received my undergraduate degree from Gaoling School of AI, Renmin University of China in June 2024. I'm actively seeking a <strong>PhD</strong> position at present. My research interest include <strong>LLM Agents</strong> and <strong>LLM Reasoning</strong>.</p>
         <!-- <p class="text-content">From 2021 to 2022, I had the privilege of studying computer vision, multi-modal machine learning, and robotics under the mentorship of Prof.
         <a href="https://dtaoo.github.io/">Di Hu</a>. In 2024, I engaged in research on the memory mechanisms of LLMs Agent, advised by Prof. <a href="https://xu-chen.com/">Xu Chen</a>.</p> -->
     </section>
@@ -141,17 +141,56 @@
                 <span class="time">2024</span>
             </div>
         </div>
-        
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Multi-agent Debate with Comments</strong><br>
+                <span class="small-content"><strong>Zhaoyang Yu</strong><sup>&dagger;</sup>, Hongduan Tian<sup>&dagger;</sup>, Bo Han<sup>&ast;</sup>.</span><br>
+                <span class="small-content">Under preparation</span><br>
+                <span class="time">2025</span>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Self-Supervised Prompt Optimization</strong><br>
+                <span class="small-content">Authorship order to be confirmed</span><br>
+                <span class="small-content">Under review</span><br>
+                <span class="time">2025</span>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Eval-Free Agentic Workflow Generation</strong><br>
+                <span class="small-content">Authorship order to be confirmed</span><br>
+                <span class="small-content">Under review</span><br>
+                <span class="time">2025</span>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-
+        <div class="list-item">
+            <div class="text-content">
+                <strong class="big-name">Multi-Agent Workflow for Alibaba Global Math Competition</strong><br>
+                - <span class="small-content">Designed a multi-agent workflow to automate the solving of complex mathematical problems.</span><br>
+                - <span class="small-content">Developed a Gate Controller for categorizing math questions, employing a combination of AI and human-designed strategies for efficient question routing.</span><br>
+                - <span class="small-content">Devised a multi-phase solution process for question answering, including logic validation and reasoning, culminating in a refined final answer through the Solution Refiner.</span><br>
+                <span class="time">2024</span>  
+            </div>
+            <table style="float: right; border: none;">
+                <tr>
+                    <td style="border: none;">
+                    </td>
+                    <td style="border: none;">
+                    </td>
+                </tr>
+            </table>
+        </div>        
         <div class="list-item">
             <div class="text-content">
                 <strong class="big-name">Audio-Visual Navigation on CyberDog</strong><br>
                 - <span class="small-content">Integrated the capabilities of large-scale pre-trained multimodal models into robots, enabling them to perform diverse actions in different visual situations.</span><br>
-                - <span class="small-content">Based on the SoundSpaces simulation environment data, a GRU-based sequential decision model was trained using PPO, with audio and images as input. The model is finally deployed on CyberDog.</span><br>
+                - <span class="small-content">Leveraged PPO (Proximal Policy Optimization) and self-designed multimodal navigation model to achieve robot navigation in real-world environments.</span><br>
                 <span class="small-content">Advised by Prof. <a href="https://dtaoo.github.io/">Di Hu</a> and Prof. <a href="https://gsai.ruc.edu.cn/english/rsong">Ruihua Song</a></span><br>
                 <span class="small-content"><a href="https://three-cyber-dogers.github.io/">GeWu-Lab</a> • <a href="https://www.bilibili.com/video/BV1FS4y1i7JR/">Bilibili[1]</a> • <a href="https://www.bilibili.com/video/BV1cT4y1W7mq/">Bilibili[2]</a></span><br>
                 <span class="time">2022-2023</span>  
@@ -171,7 +210,7 @@
                 <strong class="big-name">Sensory Substitution for the Blind (Public Welfare Projects)</strong><br>
                 - <span class="small-content">To make the visually disabled 'SEE' the world again (with the help of Beijing Disabled Persons' Foundation).</span><br>
                 <span class="small-content"><a href="https://zhuanlan.zhihu.com/p/303239531">Zhihu</a> • <a href="https://gewu-lab.github.io/project/5_sensory-substitution-for-the-blind/">GeWu-Lab</a></span><br>
-                <span class="time">2022-suspended (I hope to restart this project)</span>  
+                <span class="time">2022-suspended</span>  
             </div>
             <table style="float: right; border: none;">
                 <tr>
@@ -245,7 +284,8 @@
             <div class="text-content">
                 <strong class="big-name">Xiaomi - MiRoboticsLab</strong><br>
                 <span class="small-content">Algorithm Engineer</span><br>
-                - <span class="small-content">Developed a versatile AI agent for CyberDog by creating reusable APIs with Python and ROS2; Based on ReACT to build an embodied agent on CyberDog2.0 with multi-modal input; Construct a dataset for CyberDog application scenarios and fine-tune MiLM.</span><br>
+                - <span class="small-content">Constructed a dataset structured as (instruction, action sequence) pairs based on human preferences, which is utilized for the fine-tuning of MiLM.</span><br>
+                - <span class="small-content">Deployed the fine-tuned MiLM and utilized an iterative reasoning process to enable the execution of simple voice commands on CyberDog.</span><br>
                 <!-- - <span class="small-content">Implemented LLM-based Embodied AI Agent with Langchain first, and then broke away from LangChian and used custom Python classes.</span><br>
                 - <span class="small-content">Finished the reasoning Agent based on ReAct framework and the Python-style Code Generation Agent, completed the construction of the ability set and tried to take different ways to search in the massive text in ability set (BM25, vector database, ...).</span><br>
                 - <span class="small-content">Changed the original text-only input to multi-modal input (vision + nlp instruction) and fine-tuned LLM and VLM (LoRA, QLoRA, FFT) for better instruction following.</span><br>
