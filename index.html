@@ -3,364 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhaoyang Yu's Homepage</title>
-    <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            padding-top: 50px;
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            min-height: 100vh; 
-            text-align: center; 
-            margin-left: 27%;
-            margin-right: 27%;
-        }
-        header { 
-            display: flex; 
-            align-items: center; 
-            justify-content: flex-start; 
-            width: 80%; 
-            margin-bottom: 20px; 
-        }
-        header img {
-            margin-left: 16%;
-            margin-right: 16%; /* Adds space between the image and the text */
-        }
-        header > div {
-            text-align: left; /* Aligns the text to the left */
-        }
-        section { 
-            margin-bottom: 20px; 
-            width: 80%; 
-        }
-        h2 { 
-            text-align: left; 
-            width: 100%;
-        }
-        h2::after {
-            content: "";
-            display: block;
-            height: 2px;
-            width: 100%;
-            background: linear-gradient(to right, gray, transparent, transparent);
-            margin-top: 5px;
-        }
-        .publication, .experience { 
-            margin-left: 20px; 
-            text-align: left; 
-        }
-        .publication:before, .experience:before { 
-            content: "- "; 
-        }
-        .logo {
-            height: 50px; /* Adjust based on your preference */
-            margin-left: 10px; /* Adds space between the text and the logo */
-            vertical-align: middle; /* Aligns the logo with the middle of the text */
-        }
-        .list-item{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        .text-content {
-            text-align: left;
-            font-size: 1.1em;
-        }
-        .time {
-            font-style: italic;
-            font-size: 0.6em;
-            color: gray;
-        }
-        .big-name{
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-        .small-content{
-            font-size: 0.9em;
-        }
-        a:link, a:visited, a:hover, a:active {
-            color: blue; /* Keeps the link color consistent with the surrounding text or specified color */
-            text-decoration: none; /* Removes underline from links */
-        }
-        @media (max-width: 600px) {
-            /* 手机端不显示头像 */
-            header img {
-                display: none;
-            }
-            body, header, section {
-                margin-left: 10px; /* 在手机屏幕上减少左边距 */
-                margin-right: 10px; /* 在手机屏幕上减少右边距 */
-            }
-            header{
-                /* 左对齐 */
-                text-align: left;
-                width: auto; /* 让header的宽度自适应 */
-            }
-            section {
-                width: calc(100% - 20px); /* 让section的宽度自适应 */
-            }
-        }
-    </style>
+    <title>Zhaoyang's Homepage</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="./assets/img/zhaoyang_512.png" alt="Zhaoyang Yu" style="height: 150px;"> <!-- Adjust the image path and style as needed -->
-        <div>
-            <h1>Zhaoyang Yu<br>于兆洋</h1>
-            <p>Email: yuzhaoyang0713 [AT] ruc.edu.cn</p> <!-- Update the email address -->
-            <p><a href="https://github.com/MoshiQAQ">GitHub</a> • <a href="https://www.zhihu.com/people/arecritezhu">Zhihu</a> • <a href="https://twitter.com/ZhaoyangYu22356">Twitter</a></p>
+    <!-- Landing Page -->
+    <div class="landing-page">
+        <canvas id="particles"></canvas>
+        <div class="landing-content">
+            <h1 class="landing-title">Zhaoyang Yu</h1>
+            <p class="landing-greeting" id="greeting-text"></p>
+            <button class="enter-button" id="enterButton">Enter</button>
         </div>
-    </header>
-
-    <section id="bio">
-        <p class="text-content">I received my undergraduate degree from Gaoling School of AI, Renmin University of China in June 2024. I'm actively seeking a <strong>PhD</strong> position at present. My research interest include <strong>LLM Agents</strong> and <strong>LLM Reasoning</strong>.</p>
-        <!-- <p class="text-content">From 2021 to 2022, I had the privilege of studying computer vision, multi-modal machine learning, and robotics under the mentorship of Prof.
-        <a href="https://dtaoo.github.io/">Di Hu</a>. In 2024, I engaged in research on the memory mechanisms of LLMs Agent, advised by Prof. <a href="https://xu-chen.com/">Xu Chen</a>.</p> -->
-    </section>
-
-    <section id="publications">
-        <h2>Publications</h2>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">MobileExperts: A Dynamic Tool-Enabled Agent Team in Mobile Devices</strong><br>
-                <span class="small-content">Jiayi Zhang, Chuang Zhao, Yihan Zhao, <strong>Zhaoyang Yu</strong>, Ming He, Jianping Fan<sup>&ast;</sup>.</span><br>
-                <span class="small-content"><a href="https://arxiv.org/abs/2407.03913">arXiv</a></span><br>
-                <span class="time">2024</span>
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">AFlow: Automating Agentic Workflow Generation</strong><br>
-                <span class="small-content">Jiayi Zhang<sup>&dagger;</sup>, Jinyu Xiang<sup>&dagger;</sup>, <strong>Zhaoyang Yu</strong>, Fengwei Teng, Xionghui Chen, Jiaqi Chen, Mingchen Zhuge, Xin Cheng, Sirui Hong, Jinlin Wang, Bingnan Zheng, Bang Liu, Yuyu Luo<sup>&ast;</sup>, Chenglin Wu<sup>&ast;</sup>.</span><br>
-                <span class="small-content"><a href="https://arxiv.org/abs/2410.10762">arXiv</a> • <a href="https://github.com/geekan/MetaGPT/tree/main/examples/aflow">Github</a></span><br>
-                <span class="time">ICLR 2025 <strong>Oral</strong></span>
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Self-Supervised Prompt Optimization</strong><br>
-                <span class="small-content">Jinyu Xiang<sup>&dagger;</sup>, Jiayi Zhang<sup>&dagger;</sup>, <strong>Zhaoyang Yu</strong>, Fengwei Teng, Jinhao Tu, Xinbing Liang, Sirui Hong, Chenglin Wu<sup>&ast;</sup>, Yuyu Luo<sup>&ast;</sup>.</span><br>
-                <span class="small-content"><a href="https://arxiv.org/abs/2502.06855">arXiv</a></span><br>
-                <span class="time">2025</span>
-            </div>
-        </div>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Atom of Thoughts for Markov LLM Test-Time Scaling</strong><br>
-                <span class="small-content">Fengwei Teng, <strong>Zhaoyang Yu</strong>, Quan Shi, Jiayi Zhang, Chenglin Wu<sup>&ast;</sup>, Yuyu Luo</span><br>
-                <span class="small-content"><a href="https://arxiv.org/abs/2502.12018">arXiv</a></span><br>
-                <span class="time">2025</span>
-            </div>
-        </div>
-        <!-- <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Eval-Free Agentic Workflow Generation</strong><br>
-                <span class="small-content">Authorship order to be confirmed</span><br>
-                <span class="small-content">Under review</span><br>
-                <span class="time">2025</span>
-            </div>
-        </div> -->
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Multi-Agent Workflow for Alibaba Global Math Competition</strong><br>
-                - <span class="small-content">Designed a multi-agent workflow to automate the solving of complex mathematical problems.</span><br>
-                - <span class="small-content">Developed a Gate Controller for categorizing math questions, employing a combination of AI and human-designed strategies for efficient question routing.</span><br>
-                - <span class="small-content">Devised a multi-phase solution process for question answering, including logic validation and reasoning, culminating in a refined final answer through the Solution Refiner.</span><br>
-                <span class="time">2024</span>  
-            </div>
-            <table style="float: right; border: none;">
-                <tr>
-                    <td style="border: none;">
-                    </td>
-                    <td style="border: none;">
-                    </td>
-                </tr>
-            </table>
-        </div>        
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Audio-Visual Navigation on CyberDog</strong><br>
-                - <span class="small-content">Integrated the capabilities of large-scale pre-trained multimodal models into robots, enabling them to perform diverse actions in different visual situations.</span><br>
-                - <span class="small-content">Leveraged PPO (Proximal Policy Optimization) and self-designed multimodal navigation model to achieve robot navigation in real-world environments.</span><br>
-                <span class="small-content">Advised by Prof. <a href="https://dtaoo.github.io/">Di Hu</a> and Prof. <a href="https://gsai.ruc.edu.cn/english/rsong">Ruihua Song</a></span><br>
-                <span class="small-content"><a href="https://three-cyber-dogers.github.io/">GeWu-Lab</a> • <a href="https://www.bilibili.com/video/BV1FS4y1i7JR/">Bilibili[1]</a> • <a href="https://www.bilibili.com/video/BV1cT4y1W7mq/">Bilibili[2]</a></span><br>
-                <span class="time">2022-2023</span>  
-            </div>
-            <table style="float: right; border: none;">
-                <tr>
-                    <td style="border: none;">
-                    </td>
-                    <td style="border: none;">
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Sensory Substitution for the Blind (Public Welfare Projects)</strong><br>
-                - <span class="small-content">To make the visually disabled 'SEE' the world again (with the help of Beijing Disabled Persons' Foundation).</span><br>
-                <span class="small-content"><a href="https://zhuanlan.zhihu.com/p/303239531">Zhihu</a> • <a href="https://gewu-lab.github.io/project/5_sensory-substitution-for-the-blind/">GeWu-Lab</a></span><br>
-                <span class="time">2022-suspended</span>  
-            </div>
-            <table style="float: right; border: none;">
-                <tr>
-                    <td style="border: none;">
-                    </td>
-                    <td style="border: none;">
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <!-- <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Prompt-Engineering-Guide</strong><br>
-                <span class="small-content">Guides, papers, lecture, notebooks and resources for prompt engineering</span><br>
-                <span class="small-content"><a href="https://github.com/dair-ai/Prompt-Engineering-Guide">Link</a></span><br>
-                <span class="time">2024</span>  
-            </div>
-            <table style="float: right; border: none;">
-                <tr>
-                    <td style="border: none;">
-                        <a href="https://github.com/dair-ai/Prompt-Engineering-Guide/forks">
-                            <img src="https://img.shields.io/github/forks/dair-ai/Prompt-Engineering-Guide" alt="fork">
-                        </a>
-                    </td>
-                    <td style="border: none;">
-                        <a href="https://github.com/dair-ai/Prompt-Engineering-Guide/stargazers">
-                            <img src="https://img.shields.io/github/stars/dair-ai/Prompt-Engineering-Guide" alt="star">
-                        </a>
-                    </td>
-                </tr>
-            </table>
-        </div> -->
-
-    </section>
-
+    </div>
     
-    <!-- <section id="publications">
-        <h2>Selected Publications</h2>
-        <div class="publication">Adapting Large Language Models by Integrating Collaborative Semantics for Recommendation.</div>
-        <div class="publication">A Survey of Large Language Models.</div>
-    </section> -->
-
-    <section id="education">
-        <h2>Education</h2>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Renmin University of China</strong><br>
-                - <span class="small-content">B.E., Artificial Intelligence</span><br>
-                <!-- - <span class="small-content">GPA 3.4/4.0</span><br> -->
-                <span class="time">2020-2024</span>
-            </div>
-            <img src="./assets/img/ruc.png" alt="RUC Logo" class="logo">
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Zhaoyang Yu's Homepage</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#blog" class="nav-link">Blog</a>
         </div>
-    </section>
-
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">GeWu-Lab</strong><br>
-                <span class="small-content">Research Intern</span><br>
-                <!-- - <span class="small-content">Explored multi-modal tasks from the perspective of cross correlation coeffecient.</span><br>
-                - <span class="small-content">Designed and trained the multi-modal navigation model based on reinforcement learning.</span><br> -->
-                - <span class="small-content">Audio-Visual Navigation on CyberDog. Displayed as an excellent project on 2022 BAAI Conference.</span><br>
-                <span class="time">2021.07-2022.08</span>
-            </div>
-            <img src="./assets/img/gewu.png" alt="GeWu Logo" class="logo">
+        <button class="mobile-menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#publications" class="mobile-nav-link">Publications</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#blog" class="mobile-nav-link">Blog</a>
         </div>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Xiaomi - MiRoboticsLab</strong><br>
-                <span class="small-content">Algorithm Engineer</span><br>
-                - <span class="small-content">Constructed a dataset structured as (instruction, action sequence) pairs based on human preferences, which is utilized for the fine-tuning of MiLM.</span><br>
-                - <span class="small-content">Deployed the fine-tuned MiLM and utilized an iterative reasoning process to enable the execution of simple voice commands on CyberDog.</span><br>
-                <!-- - <span class="small-content">Implemented LLM-based Embodied AI Agent with Langchain first, and then broke away from LangChian and used custom Python classes.</span><br>
-                - <span class="small-content">Finished the reasoning Agent based on ReAct framework and the Python-style Code Generation Agent, completed the construction of the ability set and tried to take different ways to search in the massive text in ability set (BM25, vector database, ...).</span><br>
-                - <span class="small-content">Changed the original text-only input to multi-modal input (vision + nlp instruction) and fine-tuned LLM and VLM (LoRA, QLoRA, FFT) for better instruction following.</span><br>
-                - <span class="small-content">Added the function of preset instructions, users can add common instructions to speed up the reasoning and execution of the Agent.</span><br> -->
-                <span class="time">2024.01-2024.04</span>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-content">
+                <div class="profile-container">
+                    <div class="profile-photo">
+                        <img src="assets/img/yzy.jpg" alt="Zhaoyang Yu">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="name">Zhaoyang Yu</h1>
+                        <p class="title">Renmin University | DeepWisdom</p>
+                        <p class="bio">I received my undergraduate degree from Gaoling School of AI, Renmin University in 2024. I'm actively seeking a PhD position at present. My research interest includes LLM Agents and LLM Reasoning.</p>
+                        
+                        <div class="contact-info-compact">
+                            <a href="zhaoyangyu713@gmail.com" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="contact-icon-small">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://github.com/MoshiQAQ" target="_blank" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="contact-icon-small">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://x.com/ZhaoyangYu22356" target="_blank" class="contact-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="contact-icon-small">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
+                                <span>X</span>
+                            </a>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <a href="#publications" class="cta-button primary-button">View Publications</a>
+                            <a href="#projects" class="cta-button secondary-button">See Projects</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <img src="./assets/img/xiaomi.png" alt="Xiaomi Logo" class="logo">
-        </div>        
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">AI Engine Lab</strong><br>
-                <span class="small-content">Research Intern</span><br>
-                - <span class="small-content">Undergraduate Thesis: Multi-head Reflexion. Discussed three weaknesses of reflexion: randomness, stubbornness and misunderstanding. Desigend specialized reflexion head with personas to overcome these shortcomings.</span><br>
-                <!-- - <span class="small-content">Discussed three problems of self-reflection that I discovered during experiment: randomness, stubbornness and misunderstanding.</span><br>
-                - <span class="small-content">Inspired by Pinecone's tutorial: The agent is overconfident in its math ability, which causes it to not use the calculator tool to complete instructions. Sovled the problem by explicitly criticizing its math ability in the prompt words. With a similar idea, designed three reflectors for self-reflection, criticism and check respectively.</span><br>
-                - <span class="small-content">Selected HotPotQA as the experimental dataset. By comparing the accuracy and variance of the five-time experiment with self-reflection, proved the effectiveness of the method.</span><br>
-                - <span class="small-content">Future work may from a prompt perspective to help LLMs better capture critical information from redundant context.</span><br> -->
-                <span class="time">2024.02-2024.06</span>
+        </section>
+        
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2 class="section-title">Academic Publications</h2>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">MobileExperts: A Dynamic Tool-Enabled Agent Team in Mobile Devices</h3>
+                    </div>
+                    <p class="publication-authors">Jiayi Zhang, Chuang Zhao, Yihan Zhao, <span class="author-self">Zhaoyang Yu</span>, Ming He, Jianping Fan</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2407.03913" class="publication-link">Paper</a>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">AFlow: Automating Agentic Workflow Generation</h3>
+                        <div class="publication-badges">
+                            <span class="badge badge-conference">ICLR 2025</span>
+                            <span class="badge badge-award">Oral</span>
+                        </div>
+                    </div>
+                    <p class="publication-authors">Jiayi Zhang, Jinyu Xiang, <span class="author-self">Zhaoyang Yu</span>, Fengwei Teng, et al.</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2410.10762" class="publication-link">Paper</a>
+                        <a href="https://github.com/geekan/MetaGPT/tree/main/examples/aflow" class="publication-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Self-Supervised Prompt Optimization</h3>
+                    </div>
+                    <p class="publication-authors">Jinyu Xiang, Jiayi Zhang, <span class="author-self">Zhaoyang Yu</span>, Fengwei Teng, et al.</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2502.06855" class="publication-link">Paper</a>
+                        <a href="https://github.com/geekan/MetaGPT/tree/main/examples/spo" class="publication-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3 class="publication-title">Atom of Thoughts for Markov LLM Test-Time Scaling</h3>
+                    </div>
+                    <p class="publication-authors">Fengwei Teng, <span class="author-self">Zhaoyang Yu</span>, Quan Shi, Jiayi Zhang, Chenglin Wu, Yuyu Luo</p>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2502.12018" class="publication-link">Paper</a>
+                        <a href="https://github.com/qixucen/atom" class="publication-link">GitHub</a>
+                    </div>
+                </div>
             </div>
-            <img src="./assets/img/aiengine.jpeg" alt="AI Engine Logo" class="logo">
-        </div>        
-    </section>
-
-    <section id="service">
-        <h2>Service</h2>
-        <div class="list-item">
-            <div class="text-content">
-                <strong class="big-name">Microsoft Student Learning Ambassador</strong><br>
-                - <span class="small-content">Promoting MS techniques and products, Organizing and participating in MS events</span><br>
-                <span class="time">2021-2023</span>
+        </section>
+        
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Research Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="/assets/img/metagpt.png" alt="MetaGPT">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MetaGPT</h3>
+                        <p class="project-description">The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming.</p>
+                        <div class="project-technologies">
+                            <span class="project-tech-tag">Python</span>
+                            <span class="project-tech-tag">LLM</span>
+                            <span class="project-tech-tag">Agents</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/geekan/MetaGPT" target="_blank" class="project-link">GitHub</a>
+                            <a href="https://docs.deepwisdom.ai/main/en/" target="_blank" class="project-link">Documentation</a>
+                            <span class="github-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+                                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                                </svg>
+                                <span></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="/assets/img/openmanus.png" alt="OpenManus">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">OpenManus</h3>
+                        <p class="project-description">No fortress, purely open ground. OpenManus is Coming.</p>
+                        <div class="project-technologies">
+                            <span class="project-tech-tag">Python</span>
+                            <span class="project-tech-tag">LLM</span>
+                            <span class="project-tech-tag">Agents</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mannaandpoem/OpenManus" target="_blank" class="project-link">GitHub</a>
+                            <span class="github-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+                                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                                </svg>
+                                <span></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="project-item">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/250" alt="Atom of Thoughts">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Atom of Thoughts</h3>
+                        <p class="project-description">A Markov LLM test-time scaling approach that improves reasoning for language models by generating diverse thought paths, evaluating them, and selecting the most promising paths for further exploration.</p>
+                        <div class="project-technologies">
+                            <span class="project-tech-tag">LLM</span>
+                            <span class="project-tech-tag">Reasoning</span>
+                            <span class="project-tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/qixucen/atom" target="_blank" class="project-link">GitHub</a>
+                            <span class="github-stars">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+                                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
+                                </svg>
+                                <span>178</span>
+                            </span>
+                        </div>
+                    </div>
+                </div> -->
+                
             </div>
-            <img src="./assets/img/ms.png" alt="MS Logo" class="logo">
-        </div>
-    </section>
-
-    <section id="Award">
-        <h2>Award</h2>
-        <div class="list-item">
-            <div class="text-content">
-                - <span class="small-content">Sa Shixuan Scholarship (Second Prize) in RUC, School of Information</span>
-                <span class="time">2024</span><br>
-                - <span class="small-content">Alibaba Global Mathematics Competition AI Challenge <span style="color: cadetblue"><strong>Top 3 (500+ teams)</strong></span></span>
-                <span class="time">2024</span><br>
-                - <span class="small-content">The 15th National College Student Mathematics Competition Second Prize</span>
-                <span class="time">2023</span><br>
-                - <span class="small-content">Tencent Youth Game Designer Challenge <span style="color: cadetblue"><strong>Merit Award</strong></span></span>
-                <span class="time">2022</span><br>
-                - <span class="small-content">MCM/ICM Contest Meritorious Winner (top 7%)</span>
-                <span class="time">2022</span><br>
-                - <span class="small-content">2020-2021 Learning Excellence Scholarship in RUC</span>
-                <span class="time">2020-2021</span>
+        </section>
+        
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2 class="section-title">Blog</h2>
+            <div class="blog-grid">
+                <div class="blog-item">
+                    <div class="blog-content">
+                        <div class="blog-date">September 14, 2022</div>
+                        <h3 class="blog-title">【小米CyberDog二次开发】让你的机器狗有自己的小情绪！</h3>
+                        <p class="blog-excerpt">基于小米CyberDog和文澜预训练模型，我们实现了铁蛋根据不同场景而做出不同的富有情绪动作的能力。下面是保姆级教程（基于Python实现），无需ROS相关知识，让你的铁蛋也拥有自己的情绪！</p>
+                        <a href="https://zhuanlan.zhihu.com/p/525114839" class="blog-link">Read More →</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="Misc">
-        <h2>Misc</h2>
-        <div class="list-item">
-            <div class="text-content">
-                - <span class="small-content">Xiaomi CyberDog Emotional Development (Chinese) <a href="https://zhuanlan.zhihu.com/p/525114839">[Link]</a></span>
-                <span class="time">2022</span><br>
-            </div>
-        </div>
-    </section>
-
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/MoshiQAQ/moshiqaq.github.io?label=Latest%20Update">
-
-    <br>
-
-    <script>
-        // Example JavaScript for potential interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add any JS-based interactivity here
-        });
-    </script>
-
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 ZhaoyangYu. All rights reserved.</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/github-stars.js"></script>
 </body>
 </html>
