@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element: document.querySelector('.project-item:nth-child(1) .github-stars span')
         },
         {
-            owner: "mannaandpoem",
+            owner: "FoundationAgents",
             repo: "OpenManus",
             element: document.querySelector('.project-item:nth-child(2) .github-stars span')
         },
