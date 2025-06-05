@@ -42,6 +42,8 @@ window.addEventListener('scroll', highlightActiveSection);/**
 
 // 等待页面加载完成
 document.addEventListener('DOMContentLoaded', () => {
+// Ensure the active navigation state is correct on initial load
+highlightActiveSection();
 // 元素引用
 const landingPage = document.querySelector('.landing-page');
 const mainContent = document.querySelector('.main-content');
