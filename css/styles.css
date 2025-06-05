@@ -628,6 +628,10 @@ canvas {
     right: 0;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
