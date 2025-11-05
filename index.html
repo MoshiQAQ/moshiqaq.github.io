@@ -3,230 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhaoyang's Homepage</title>
+    <title>Zhaoyang Yu</title>
+    <meta name="description" content="Zhaoyang Yu - Researcher focusing on LLM agents and reasoning.">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Landing Page -->
-    <div class="landing-page">
-        <canvas id="particles"></canvas>
-        <div class="landing-content">
-            <h1 class="landing-title">Zhaoyang Yu</h1>
-            <p class="landing-greeting" id="greeting-text"></p>
-            <button class="enter-button" id="enterButton">Enter</button>
-        </div>
+    <div class="top-nav" id="nav">
+        <a href="#bio">Bio</a>
+        <span>/</span>
+        <a href="#publications">Publications</a>
+        <span>/</span>
+        <a href="#projects">Projects</a>
+        <span>/</span>
+        <a href="#experience">Experience</a>
+        <span>/</span>
+        <a href="#service">Service</a>
+        <span>/</span>
+        <a href="#talks">Talks</a>
+        <span>/</span>
+        <a href="#blog">Blogs</a>
     </div>
-    
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Zhaoyang Yu's Homepage</div>
-        <div class="nav-links">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#publications" class="nav-link">Publications</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#blog" class="nav-link">Blog</a>
-        </div>
-        <button class="mobile-menu-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-    
-    <!-- Mobile Navigation -->
-    <div class="mobile-nav">
-        <div class="mobile-nav-links">
-            <a href="#home" class="mobile-nav-link">Home</a>
-            <a href="#publications" class="mobile-nav-link">Publications</a>
-            <a href="#projects" class="mobile-nav-link">Projects</a>
-            <a href="#blog" class="mobile-nav-link">Blog</a>
-        </div>
-    </div>
-    
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Home Section -->
-        <section id="home">
-            <div class="home-content">
-                <div class="profile-container">
-                    <div class="profile-photo">
-                        <img src="assets/img/yzy.jpg" alt="Zhaoyang Yu">
+
+    <main class="container">
+        <section id="bio" class="section">
+            <div class="intro">
+                <div class="intro-top">
+                    <div class="intro-photo">
+                        <img src="assets/img/yzy.jpg" alt="Portrait of Zhaoyang Yu">
                     </div>
-                    <div class="profile-info">
-                        <h1 class="name">Zhaoyang Yu</h1>
-                        <p class="title">Renmin University | DeepWisdom</p>
-                        <p class="bio">I received my undergraduate degree from Gaoling School of AI, Renmin University in 2024. I'm actively seeking a PhD position at present. My research interest includes LLM Agents and LLM Reasoning.</p>
-                        
-                        <div class="contact-info-compact">
-                            <a href="mailto:zhaoyangyu713@gmail.com" class="contact-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="contact-icon-small">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                                <span>Email</span>
-                            </a>     
-                            <a href="https://github.com/MoshiQAQ" target="_blank" class="contact-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="contact-icon-small">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://x.com/ZhaoyangYu22356" target="_blank" class="contact-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="contact-icon-small">
-                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                                </svg>
-                                <span>X</span>
-                            </a>
-                        </div>
-                        
-                        <div class="cta-buttons">
-                            <a href="#publications" class="cta-button primary-button">View Publications</a>
-                            <a href="#projects" class="cta-button secondary-button">See Projects</a>
-                        </div>
+                    <div class="intro-summary">
+                        <h1>Zhaoyang Yu</h1>
+                        <p class="tagline">DeepWisdom</p>
+                        <ul class="contact-links">
+                            <li><a href="mailto:zhaoyangyu713@gmail.com">Email</a></li>
+                            <li><a href="https://github.com/MoshiQAQ" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://x.com/ZhaoyangYu22356" target="_blank" rel="noopener noreferrer">X</a></li>
+                        </ul>
                     </div>
+                </div>
+                <div class="intro-body">
+                    <p>I am a Research Intern at <a href="https://www.deepwisdom.ai/" target="_blank" rel="noopener noreferrer">DeepWisdom</a>, where I work with <a href="https://alexanderwu.mgx.world/" target="_blank" rel="noopener noreferrer">Chenglin Wu</a>, <a href="https://didiforgithub.github.io/" target="_blank" rel="noopener noreferrer">Jiayi Zhang</a>, and <a href="https://evanwu1125.github.io/" target="_blank" rel="noopener noreferrer">Yifan Wu</a>. I am fortunate to collaborate with <a href="https://mila.quebec/en/directory/bang-liu" target="_blank" rel="noopener noreferrer">Bang Liu</a> and <a href="https://luoyuyu.vip/" target="_blank" rel="noopener noreferrer">Yuyu Luo</a>.</p>
+                    <p>I received my B.E. from the <a href="http://ai.ruc.edu.cn/english/index.htm" target="_blank" rel="noopener noreferrer">Renmin University of China</a>. As a Co-Founder of <a href="https://github.com/FoundationAgents/OpenManus" target="_blank" rel="noopener noreferrer">OpenManus</a> and a member of <a href="https://foundationagents.org/" target="_blank" rel="noopener noreferrer">Foundation Agents</a>, I am committed to advancing open-source agent infrastructure and research. Currently, my research interest focuses on developing LLM-based agents that can operate effectively across diverse environments and tasks.</p>
+                    <div class="intro-focus">
+                        <h3 class="intro-subheading">Focus</h3>
+                        <ul class="focus-list">
+                            <li><strong>Agent learning.</strong> Learning is key to cross-environment capabilities. Learning environment dynamics requires complex optimization approaches, signals, and targets beyond model parameters, like <a href="#pub-aflow">AFlow</a> optimizing decision workflows and <a href="#pub-spo">SPO</a> exploring new reward signals for prompt optimization.</li>
+                            <li><strong>Decision-making.</strong> Human decision-making naturally enables cross-environment learning and generalization. We explore agent decision structures that mirror human reasoning, potentially unlocking similar learning advantages. <a href="#pub-aot">AoT</a> atomizes reasoning to address context limitations, while <a href="#pub-recode">ReCode</a> unifies planning and action for more natural decision-making.</li>
+                            <li><strong>Environment scaling.</strong> Agent environments are inevitably simplified versions of human environments, lacking complexity, dynamics, and rich reward signals that make agent learning inherently challenging. We aim to scale environments to provide richer dynamics, diverse distributions, and more abundant rewards for effective learning.</li>
+                        </ul>
+                    </div>
+                    <p class="availability">I am actively seeking a PhD position.</p>
                 </div>
             </div>
         </section>
-        
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2 class="section-title">Academic Publications</h2>
-            <div class="publication-list">
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">MobileExperts: A Dynamic Tool-Enabled Agent Team in Mobile Devices</h3>
-                    </div>
-                    <p class="publication-authors">Jiayi Zhang, Chuang Zhao, Yihan Zhao, <span class="author-self">Zhaoyang Yu</span>, Ming He, Jianping Fan</p>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2407.03913" class="publication-link">Paper</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">AFlow: Automating Agentic Workflow Generation</h3>
-                        <div class="publication-badges">
-                            <span class="badge badge-conference">ICLR 2025</span>
-                            <span class="badge badge-award">Oral</span>
-                        </div>
-                    </div>
-                    <p class="publication-authors">Jiayi Zhang†, Jinyu Xiang†, <span class="author-self">Zhaoyang Yu</span>, Fengwei Teng, Xionghui Chen, Jiaqi Chen, Mingchen Zhuge, Xin Cheng, Sirui Hong, Jinlin Wang, Bingnan Zheng, Bang Liu, Yuyu Luo, Chenglin Wu</p>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2410.10762" class="publication-link">Paper</a>
-                        <a href="https://github.com/geekan/MetaGPT/tree/main/examples/aflow" class="publication-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Self-Supervised Prompt Optimization</h3>
-                    </div>
-                    <p class="publication-authors">Jinyu Xiang†, Jiayi Zhang†, <span class="author-self">Zhaoyang Yu</span>, Fengwei Teng, Jinhao Tu, Xinbing Liang, Sirui Hong, Chenglin Wu, Yuyu Luo</p>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2502.06855" class="publication-link">Paper</a>
-                        <a href="https://github.com/geekan/MetaGPT/tree/main/examples/spo" class="publication-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Atom of Thoughts for Markov LLM Test-Time Scaling</h3>
-                    </div>
-                    <p class="publication-authors">Fengwei Teng, <span class="author-self">Zhaoyang Yu</span>, Quan Shi, Jiayi Zhang, Chenglin Wu, Yuyu Luo</p>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2502.12018" class="publication-link">Paper</a>
-                        <a href="https://github.com/qixucen/atom" class="publication-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="publication-item">
-                    <div class="publication-header">
-                        <h3 class="publication-title">Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems</h3>
-                    </div>
-                    <p class="publication-authors">Bang Liu, Xinfeng Li, Jiayi Zhang, Jinlin Wang, Tanjin He, Sirui Hong, Hongzhang Liu, Shaokun Zhang, Kaitao Song, Kunlun Zhu, Yuheng Cheng, Suyuchen Wang, Xiaoqiang Wang, Yuyu Luo, Haibo Jin, Peiyan Zhang, Ollie Liu, Jiaqi Chen, Huan Zhang, <span class="author-self">Zhaoyang Yu</span>, Haochen Shi, Boyan Li, Dekun Wu, Fengwei Teng, Xiaojun Jia, Jiawei Xu, Jinyu Xiang, Yizhang Lin, Tianming Liu, Tongliang Liu, Yu Su, Huan Sun, Glen Berseth, Jianyun Nie, Ian Foster, Logan Ward, Qingyun Wu, Yu Gu, Mingchen Zhuge, Xiangru Tang, Haohan Wang, Jiaxuan You, Chi Wang, Jian Pei, Qiang Yang, Xiaoliang Qi, Chenglin Wu</p>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2504.01990" class="publication-link">Paper</a>
-                    </div>
-                </div>
-            </div>
+
+        <section id="publications" class="section">
+            <h2>Selected Publications</h2>
+            <ul class="item-list publication-list">
+                <li id="pub-recode">
+                    <p class="item-title"><strong>ReCode: Unify Plan and Action for Universal Granularity Control.</strong></p>
+                    <p class="item-authors"><strong>Zhaoyang Yu</strong>, Jiayi Zhang, Huixue Su, Yufan Zhao, Yifan Wu, Mingyi Deng, Jinyu Xiang, Yizhang Lin, Lingxiao Tang, Yingchao Li, Yuyu Luo, Bang Liu, Chenglin Wu.</p>
+                    <!-- <p class="item-meta">ArXiv: <a href="https://arxiv.org/abs/2510.23564" target="_blank" rel="noopener noreferrer">2510.23564</a>. <span class="item-note">Under Review</span></p> -->
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2510.23564" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/FoundationAgents/ReCode" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+                <li id="pub-interactcomp">
+                    <p class="item-title"><strong>InteractComp: Evaluating Search Agents With Ambiguous Queries.</strong></p>
+                    <p class="item-authors">Mingyi Deng, Lijun Huang, Yani Fan, Jiayi Zhang, <strong>Zhaoyang Yu</strong>, Tai Zhong, Xinyu Wang, Xiangru Tang, Nan Tang, Chenglin Wu, Yuyu Luo, et al.</p>
+                    <!-- <p class="item-meta">ArXiv: <a href="https://arxiv.org/abs/2510.24668" target="_blank" rel="noopener noreferrer">2510.24668</a>. <span class="item-note">Under Review</span></p> -->
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2510.24668" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/FoundationAgents/InteractComp" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+                <li id="pub-aflow">
+                    <p class="item-title"><strong>AFlow: Automating Agentic Workflow Generation.</strong></p>
+                    <p class="item-authors">Jiayi Zhang, Jinyu Xiang, <strong>Zhaoyang Yu</strong>, Fengwei Teng, Xionghui Chen, Jiaqi Chen, Mingchen Zhuge, Xin Cheng, Sirui Hong, Jinlin Wang, Bingnan Zheng, Bang Liu, Yuyu Luo, Chenglin Wu.</p>
+                    <p class="item-meta"><span class="item-venue">The International Conference on Learning Representations (ICLR), 2025.</span> <span class="item-badge">Oral</span></p>
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2410.10762" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/FoundationAgents/AFlow" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+                <li id="pub-spo">
+                    <p class="item-title"><strong>Self-supervised Prompt Optimization.</strong></p>
+                    <p class="item-authors">Jinyu Xiang, Jiayi Zhang, <strong>Zhaoyang Yu</strong>, Xinbing Liang, Fengwei Teng, Jinhao Tu, Fashen Ren, Xiangru Tang, Sirui Hong, Chenglin Wu, Yuyu Luo.</p>
+                    <p class="item-meta"><span class="item-venue">The Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025.</span></p>
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2502.06855" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/FoundationAgents/SPO" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+                <li id="pub-aot">
+                    <p class="item-title"><strong>Atom of Thoughts for Markov LLM Test-Time Scaling.</strong></p>
+                    <p class="item-authors">Fengwei Teng, <strong>Zhaoyang Yu</strong>, Quan Shi, Jiayi Zhang, Chenglin Wu, Yuyu Luo.</p>
+                    <p class="item-meta"><span class="item-venue">The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS), 2025.</span></p>
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2502.12018" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/qixucen/atom" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+                <li id="pub-foundation-agents">
+                    <p class="item-title"><strong>Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems.</strong></p>
+                    <p class="item-authors">Bang Liu, Xinfeng Li, Jiayi Zhang, Jinlin Wang, Tanjin He, Sirui Hong, Hongzhang Liu, Shaokun Zhang, Kaitao Song, Kunlun Zhu, Yuheng Cheng, Suyuchen Wang, Xiaoqiang Wang, Yuyu Luo, Haibo Jin, Peiyan Zhang, Ollie Liu, Jiaqi Chen, Huan Zhang, <strong>Zhaoyang Yu</strong>, Haochen Shi, Boyan Li, Dekun Wu, Fengwei Teng, Xiaojun Jia, Jiawei Xu, Jinyu Xiang, Yizhang Lin, Tianming Liu, Tongliang Liu, Yu Su, Huan Sun, Glen Berseth, Jianyun Nie, Ian Foster, Logan Ward, Qingyun Wu, Yu Gu, Mingchen Zhuge, Xiangru Tang, Haohan Wang, Jiaxuan You, Chi Wang, Jian Pei, Qiang Yang, Xiaoliang Qi, Chenglin Wu.</p>
+                    <!-- <p class="item-meta">ArXiv: <a href="https://arxiv.org/abs/2504.01990" target="_blank" rel="noopener noreferrer">2504.01990</a>.</p> -->
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2504.01990" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/FoundationAgents/awesome-foundation-agents" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+                <li id="pub-visjudge">
+                    <p class="item-title"><strong>VisJudge-Bench: Aesthetics and Quality Assessment of Visualizations.</strong></p>
+                    <p class="item-authors">Yupeng Xie, Zhiyang Zhang, Yifan Wu, Sirong Lu, Jiayi Zhang, <strong>Zhaoyang Yu</strong>, Jinlin Wang, Sirui Hong, Bang Liu, Chenglin Wu, Yuyu Luo.</p>
+                    <!-- <p class="item-meta">ArXiv: <a href="https://arxiv.org/abs/2510.22373" target="_blank" rel="noopener noreferrer">2510.22373</a>.</p> -->
+                    <p class="item-links">
+                        [<a href="https://arxiv.org/abs/2510.22373" target="_blank" rel="noopener noreferrer">paper</a>] ·
+                        [<a href="https://github.com/HKUSTDial/VisJudgeBench" target="_blank" rel="noopener noreferrer">code</a>]
+                    </p>
+                </li>
+            </ul>
         </section>
-        
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2 class="section-title">Research Projects</h2>
-            <div class="projects-grid">
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="/assets/img/metagpt.png" alt="MetaGPT">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">MetaGPT</h3>
-                        <p class="project-description">The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming.</p>
-                        <div class="project-technologies">
-                            <span class="project-tech-tag">Python</span>
-                            <span class="project-tech-tag">LLM</span>
-                            <span class="project-tech-tag">Agents</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/geekan/MetaGPT" target="_blank" class="project-link">GitHub</a>
-                            <a href="https://docs.deepwisdom.ai/main/en/" target="_blank" class="project-link">Documentation</a>
-                            <span class="github-stars">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
-                                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
-                                </svg>
-                                <span></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="/assets/img/openmanus.png" alt="OpenManus">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">OpenManus</h3>
-                        <p class="project-description">No fortress, purely open ground. OpenManus is Coming.</p>
-                        <div class="project-technologies">
-                            <span class="project-tech-tag">Python</span>
-                            <span class="project-tech-tag">LLM</span>
-                            <span class="project-tech-tag">Agents</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/FoundationAgents/OpenManus" target="_blank" class="project-link">GitHub</a>
-                            <span class="github-stars">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
-                                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/>
-                                </svg>
-                                <span></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+        <section id="projects" class="section">
+            <h2>Selected Projects</h2>
+            <ul class="item-list projects-list">
+                <!-- PROJECTS_LIST_START -->
+                <li class="project-item">
+                    <p class="item-title"><a href="https://github.com/FoundationAgents/OpenManus" target="_blank" rel="noopener noreferrer">OpenManus</a></p>
+                    <p class="project-meta">50.7k stars · 8.8k forks</p>
+                    <p class="project-description">No fortress, purely open ground.  OpenManus is Coming.</p>
+                </li>
+                <li class="project-item">
+                    <p class="item-title"><a href="https://github.com/FoundationAgents/ReCode" target="_blank" rel="noopener noreferrer">ReCode</a></p>
+                    <p class="project-meta">352 stars · 38 forks</p>
+                    <p class="project-description">Next paradigm for LLM Agent. Unify plan and action through recursive code generation for adaptive, human-like decision-making.</p>
+                </li>
+                <li class="project-item">
+                    <p class="item-title"><a href="https://github.com/FoundationAgents/awesome-foundation-agents" target="_blank" rel="noopener noreferrer">Awesome-Foundation-Agents</a></p>
+                    <p class="project-meta">1.8k stars · 177 forks</p>
+                    <p class="project-description">About Awesome things towards foundation agents. Papers / Repos / Blogs / ...</p>
+                </li>
+                <li class="project-item">
+                    <p class="item-title"><a href="https://github.com/FoundationAgents/MetaGPT" target="_blank" rel="noopener noreferrer">MetaGPT</a></p>
+                    <p class="project-meta">59.2k stars · 7.2k forks</p>
+                    <p class="project-description">🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming</p>
+                </li>
+                <!-- PROJECTS_LIST_END -->
+            </ul>
         </section>
-        
-        <!-- Blog Section -->
-        <section id="blog">
-            <h2 class="section-title">Blog</h2>
-            <div class="blog-grid">
-                <div class="blog-item">
-                    <div class="blog-content">
-                        <div class="blog-date">September 14, 2022</div>
-                        <h3 class="blog-title">【小米CyberDog二次开发】让你的机器狗有自己的小情绪！</h3>
-                        <p class="blog-excerpt">基于小米CyberDog和文澜预训练模型，我们实现了铁蛋根据不同场景而做出不同的富有情绪动作的能力。下面是保姆级教程（基于Python实现），无需ROS相关知识，让你的铁蛋也拥有自己的情绪！</p>
-                        <a href="https://zhuanlan.zhihu.com/p/525114839" class="blog-link">Read More →</a>
-                    </div>
-                </div>
-            </div>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <ul class="simple-list">
+                <li>
+                    <strong>Research Intern, DeepWisdom</strong><br>
+                    <span>Feb 2025 &ndash; Present &middot; Shenzhen</span><br>
+                    <span>with <a href="https://alexanderwu.mgx.world/" target="_blank" rel="noopener noreferrer">Chenglin Wu</a>, <a href="https://didiforgithub.github.io/" target="_blank" rel="noopener noreferrer">Jiayi Zhang</a>, and <a href="https://evanwu1125.github.io/" target="_blank" rel="noopener noreferrer">Yifan Wu</a></span>
+                </li>
+                <li>
+                    <strong>Algorithm Engineer Intern, Xiaomi</strong><br>
+                    <span>Jan 2024 &ndash; Apr 2024 &middot; Beijing</span><br>
+                    <span>with <a href="https://github.com/MiRoboticsLab" target="_blank" rel="noopener noreferrer">MiRoboticsLab</a></span>
+                </li>
+                <li>
+                    <strong>Research Assistant, GeWu Lab (Renmin Univ)</strong><br>
+                    <span>Jun 2022 &ndash; Aug 2023 &middot; Beijing</span><br>
+                    <span>with <a href="https://dtaoo.github.io/" target="_blank" rel="noopener noreferrer">Prof. Di Hu</a></span>
+                </li>
+            </ul>
         </section>
-    </div>
-    
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 ZhaoyangYu. All rights reserved.</p>
+
+        <section id="service" class="section">
+            <h2>Service</h2>
+            <ul class="simple-list">
+                <li><strong>Reviewer</strong>: ICLR 2026; ICML 2025 MAS Workshop</li>
+            </ul>
+        </section>
+
+        <section id="talks" class="section">
+            <h2>Talks</h2>
+            <ul class="simple-list">
+                <li>
+                    <strong>“Advances and Challenges in Foundation Agents”</strong><br>
+                    <span>Invited talk at 2025 X-AGI &amp; The 18th China-R Conference, Beijing (Oct 2025)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="blog" class="section">
+            <h2>Blogs</h2>
+            <ul class="item-list">
+                <li>
+                    <p class="item-title"><strong>规划与行动统一：ReCode 对 Agent 决策的重新思考</strong> <span class="item-badge">2025.11.03 · Chinese</span></p>
+                    <p class="item-description">用代码统一表示 plan 和 action，结合动态展开机制，可能为 foundation agent 的 learning 提供一个更好的 decision-making 基础，但这只是一个初步探索。</p>
+                    <p class="item-links"> 
+                        [<a href="https://zhuanlan.zhihu.com/p/1968634056053858629" target="_blank" rel="noopener noreferrer">read more</a>]
+                    </p>
+                </li>
+                <li>
+                    <p class="item-title"><strong>【小米CyberDog二次开发】让你的机器狗有自己的小情绪！</strong> <span class="item-badge">2022.09.14 · Chinese</span></p>
+                    <p class="item-description">基于小米CyberDog和文澜预训练模型，我们实现了铁蛋根据不同场景而做出不同的富有情绪动作的能力。下面是保姆级教程（基于Python实现），无需ROS相关知识，让你的铁蛋也拥有自己的情绪！</p>
+                    <p class="item-links">
+                        [<a href="https://zhuanlan.zhihu.com/p/525114839" target="_blank" rel="noopener noreferrer">read more</a>]
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Zhaoyang Yu. Built with a clean template inspired by <a href="https://yupenghou.com/" target="_blank" rel="noopener noreferrer">Yupeng Hou</a>.</p>
     </footer>
-    
-    <!-- Scripts -->
-    <script src="js/particles.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/github-stars.js"></script>
 </body>
 </html>

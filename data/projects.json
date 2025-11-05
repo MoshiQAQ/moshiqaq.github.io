@@ -1,0 +1,26 @@
+[
+    {
+        "name": "OpenManus",
+        "url": "https://github.com/FoundationAgents/OpenManus",
+        "fallback_meta": "50k stars · 8.8k forks",
+        "fallback_description": "Open-source foundation agents project built on the principle of complete openness and accessibility."
+    },
+    {
+        "name": "ReCode",
+        "url": "https://github.com/FoundationAgents/ReCode",
+        "fallback_meta": "—",
+        "fallback_description": "ReCode unifies planning and action to enable universal granularity control for LLM agents."
+    },
+    {
+        "name": "Awesome-Foundation-Agents",
+        "url": "https://github.com/FoundationAgents/awesome-foundation-agents",
+        "fallback_meta": "1.8k stars",
+        "fallback_description": "Curated collection of papers exploring the path towards Foundation Agents."
+    },
+    {
+        "name": "MetaGPT",
+        "url": "https://github.com/FoundationAgents/MetaGPT",
+        "fallback_meta": "59k stars · 7.2k forks",
+        "fallback_description": "Multi-agent framework enabling collaborative AI agents to build software via natural language."
+    }
+]
