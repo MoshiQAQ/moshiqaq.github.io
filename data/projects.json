@@ -8,7 +8,7 @@
     {
         "name": "ReCode",
         "url": "https://github.com/FoundationAgents/ReCode",
-        "fallback_meta": "—",
+        "fallback_meta": "350 stars",
         "fallback_description": "ReCode unifies planning and action to enable universal granularity control for LLM agents."
     },
     {
@@ -18,9 +18,9 @@
         "fallback_description": "Curated collection of papers exploring the path towards Foundation Agents."
     },
     {
-        "name": "MetaGPT",
-        "url": "https://github.com/FoundationAgents/MetaGPT",
-        "fallback_meta": "59k stars · 7.2k forks",
-        "fallback_description": "Multi-agent framework enabling collaborative AI agents to build software via natural language."
+        "name": "AFlow",
+        "url": "https://github.com/FoundationAgents/AFlow",
+        "fallback_meta": "250 stars",
+        "fallback_description": "Automated Agentic Workflow Generation."
     }
 ]
